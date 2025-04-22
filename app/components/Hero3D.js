@@ -45,7 +45,7 @@ const Hero3D = () => {
               className="col-span-3 md:col-span-1 h-[400px] md:h-[400px] relative"
             >
               <Image
-                src="/Picture.png" // Replace with your actual image path
+                src="/images/Picture.png" // Replace with your actual image path
                 alt="Design concept visualization"
                 fill
                 className="object-cover object-center"
