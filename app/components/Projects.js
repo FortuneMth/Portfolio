@@ -9,31 +9,30 @@ const Projects = () => {
       title: 'JiveJunction',
       description: 'Mobile App',
       image: '/images/Jivejunction.png',
-      link: 'https://www.figma.com/proto/U9QV2YSjxyOhDYEIJTOqHh/UI-Fundamentals?page-id=109%3A11511&node-id=448-2769&node-type=frame&viewport=267%2C1313%2C0.18&t=WGqd7amHtKx6nIAs-1&scaling=min-zoom&content-scaling=fixed'
+      link: 'https://www.figma.com/proto/U9QV2YSjxyOhDYEIJTOqHh/UI-Fundamentals?page-id=109%3A11511&node-id=448-2769'
     },
     {
       id: 2,
       title: 'Nexus Financial Consortium',
       description: 'Intranet',
       image: '/images/Nexus.png',
-      link: 'https://www.figma.com/proto/xLsCkwCWlfVPmklmLZV2Yj/Portfolio?page-id=79%3A28&node-id=99-12087&node-type=frame&viewport=-18354%2C4143%2C0.46&t=mDPWddFJYiUoAUcD-1&scaling=min-zoom&content-scaling=fixed'
+      link: 'https://www.figma.com/proto/xLsCkwCWlfVPmklmLZV2Yj/Portfolio?page-id=79%3A28&node-id=99-12087'
     },
     {
       id: 3,
       title: 'Aegis',
       description: 'Landing Page',
       image: '/images/Aegis.png',
-      link: 'https://www.figma.com/proto/KPfJoXIm1LUuk3RjAcQULx/AI-Fraud-Detection?page-id=0%3A1&node-id=1-2&viewport=-349%2C424%2C0.46&t=pzkLXcagy51jM1q4-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2' // Add link here if you have one
+      link: 'https://www.figma.com/proto/KPfJoXIm1LUuk3RjAcQULx/AI-Fraud-Detection?page-id=0%3A1&node-id=1-2'
     },
     {
       id: 4,
       title: 'Voyage Finance',
       description: 'Hackathon',
       image: '/images/Investec.png',
-      link: 'https://www.figma.com/proto/Vb3LMM8p5Ou565uOCJ1Dky/Hackteam7?page-id=129%3A1362&node-id=154-1638&node-type=frame&viewport=591%2C1086%2C0.19&t=qfoiMIauQQCN8wKu-1&scaling=scale-down-width&content-scaling=fixed'
+      link: 'https://www.figma.com/proto/Vb3LMM8p5Ou565uOCJ1Dky/Hackteam7?page-id=129%3A1362&node-id=154-1638'
     }
   ];
-  
 
   return (
     <section className="py-20 bg-black">
@@ -68,11 +67,14 @@ const Projects = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative"
             >
-              {/* Project Image Container */}
+              {/* Image */}
               <div className="relative aspect-[4/3] bg-[#111] rounded-2xl overflow-hidden">
-                <div 
-                  className="absolute inset-0 bg-cover bg-center opacity-100 transition-transform duration-700 group-hover:scale-105"
-                  style={{ backgroundImage: `url(${project.image})` }}
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-900/20 to-transparent" />
               </div>
@@ -87,6 +89,8 @@ const Projects = () => {
                 </p>
                 <motion.a
                   href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-4 inline-flex items-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0"
                   whileHover={{ x: 5 }}
                 >
@@ -102,4 +106,4 @@ const Projects = () => {
   );
 };
 
-export default Projects; 
+export default Projects;
