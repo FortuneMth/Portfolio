@@ -8,14 +8,14 @@ const Projects = () => {
       id: 1,
       title: 'JiveJunction',
       description: 'Mobile App',
-      image: '/images/Jivejunction.png',
+      image: '/images/jive.png',
       link: 'https://www.figma.com/proto/U9QV2YSjxyOhDYEIJTOqHh/UI-Fundamentals?page-id=109%3A11511&node-id=448-2769'
     },
     {
       id: 2,
       title: 'Nexus Financial Consortium',
       description: 'Intranet',
-      image: '/images/Nexus.png',
+      image: '/images/nex.png',
       link: 'https://www.figma.com/proto/xLsCkwCWlfVPmklmLZV2Yj/Portfolio?page-id=79%3A28&node-id=99-12087'
     },
     {
